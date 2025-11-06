@@ -1,16 +1,19 @@
 from django.db import models
 
 class School (models.Model):
+  def __str__(self): return self.name
 
   name = models.CharField(max_length=100)
 
 class User (models.Model):
+  def __str__(self): return self.name
 
   name = models.CharField(max_length=25)
   school = models.ForeignKey(School, null=True, on_delete=models.SET_NULL)
   date_joined = models.DateTimeField("date joined")
 
 class Post (models.Model):
+  def __str__(self): return self.title
 
   user = models.ForeignKey(User, on_delete=models.CASCADE)
   title = models.CharField(max_length=50)
@@ -18,6 +21,7 @@ class Post (models.Model):
   date = models.DateTimeField("date published")
 
 class Attachment (models.Model):
+  def __str__(self): return self.original_file_name
 
   post = models.ForeignKey(Post, on_delete=models.CASCADE)
 
@@ -38,9 +42,11 @@ class Attachment (models.Model):
     default = FileType.OTHER
   )
 
+  original_file_name = models.CharField(max_length=128)
   file_path = models.CharField(max_length=128)
 
 class Comment (models.Model):
+  def __str__(self): return self.text
 
   user = models.ForeignKey(User, on_delete=models.CASCADE)
   post = models.ForeignKey(Post, on_delete=models.CASCADE)
