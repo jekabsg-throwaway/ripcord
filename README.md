@@ -1,11 +1,11 @@
 ## Ripcord
-🇱🇻 Platforma, kur studenti dalās ar kvalitatīviem studiju resursiem un palīgmateriāliem.
-
 🇬🇧 Platform for students to share quality study resources and guides.
 
-Autors/Author: Jēkabs G.
+🇱🇻 Platforma, kur studenti dalās ar kvalitatīviem studiju resursiem un palīgmateriāliem.
 
-## Apraksts / Description
+**Author/Autors**: Jēkabs G.
+
+## Description / Apraksts
 
 🇬🇧
 ---
@@ -23,7 +23,7 @@ Tāpēc nav noslēpums, ka visintuitīvākie mācību resursi nāk nevis no ofic
 
 _Ripcord mērķis ir to mainīt_ - vismaz tā es teiktu, [ja būtu naivāks](https://xkcd.com/927/). Patiesībā, šis ir tikai iesniegums praktiskajam darbam ar netriviālu datubāzes implementāciju.
 
-## Instrukcijas / Usage guide
+## Usage guide / Instrukcijas
 
 🇬🇧
 ---
