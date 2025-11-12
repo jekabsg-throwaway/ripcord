@@ -3,6 +3,11 @@
 
 🇱🇻 Platforma, kur studenti dalās ar kvalitatīviem studiju resursiem un palīgmateriāliem.
 
+![Home page/Sākumlapa](/screenshots/home.png)
+![Forum page/Foruma lapa](/screenshots/forum.png)
+![Forum post/Foruma ieraksts](/screenshots/post.png)
+![Registration/Reģistrācija](/screenshots/register.png)
+
 **Author/Autors**: Jēkabs G.
 
 ## Description / Apraksts
