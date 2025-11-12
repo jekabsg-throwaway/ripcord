@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forum Index</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+<body>
+    <header>
+      <nav>
+        <a href="/">Home</a>
+      </nav>
+      <h1>Forum Posts</h1>
+    </header>
+
+    {% if posts %}
+        <div>
+        {% for post in posts %}
+            <p class="notice">
+              <strong>{{ post.title }}</strong>
+              <br><br>
+              {% if post.text|length > 200 %}
+                {{ post.text | truncatechars:200 }}
+                <br><a href="/forum/posts/{{ post.id }}">Read more</a>
+              {% else %}
+                {{ post.text }}
+              {% endif %}
+              <br><br>
+              <small>Posted by {{ post.user.name }} on {{ post.date }}</small>
+            </p>
+        {% endfor %}
+        </div>
+    {% else %}
+        <p>No posts yet.</p>
+    {% endif %}
+</body>
+</html>
