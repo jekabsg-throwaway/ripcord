@@ -20,13 +20,13 @@
     </article>
     {% if comments %}
       {% for comment in comments %}
-        <article>
+        <blockquote>
           <p>
             {{ comment.text }}
             <br>
-            <small>Posted by {{ comment.user.name }} on {{ post.date }}</small>
+            <cite>Posted by {{ comment.user.name }} on {{ post.date }}</cite>
           </p>
-        </article>
+        </blockquote>
       {% endfor %}
     {% else %}
       <p><small><i>No comments (yet!)</i></small></p>
