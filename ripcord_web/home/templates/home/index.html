@@ -19,9 +19,18 @@
 
     <center>
       <br>
-      <a class="button" href="#">Sign up</a>
-      &nbsp; or &nbsp;
-      <a class="button" href="#">Log in</a>
+      {% if user.is_authenticated %}
+        <p>Signed in as <strong>{{ user.username }}</strong>
+        &nbsp;
+        <form action="/auth/logout/" method="post">
+          {% csrf_token %}
+          <button type="submit">Log out</button>
+        </form>
+      {% else %}
+        <a class="button" href="/auth/register/">Sign up</a>
+        &nbsp; or &nbsp;
+        <a class="button" href="/auth/login/">Log in</a>
+      {% endif %}
     </center>
 
     <section>

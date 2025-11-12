@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+<body>
+  <main>
+
+    <h2>Create account</h2>
+
+    <form method="post">
+      {% csrf_token %}
+      Username:<br>
+      {{ form.username }}
+      <ul>
+        <li>Up to 150 characters.</li>
+        <li>Letters, digits and <code>@.+-_</code> only</li>
+      </ul>
+      Password:<br>
+      {{ form.password1 }}
+      <ul>
+        <li>Your password can't be too similar to your other personal information.</li>
+        <li>Your password must contain at least 8 characters.</li>
+        <li>Your password can't be a commonly used password.</li>
+        <li>Your password can't be entirely numeric.</li>
+      </ul>
+      Repeat password:<br>
+      {{ form.password2 }}
+      <ul>
+        <li>Same as before, for verification</li>
+      </ul>
+      <br>
+      <button type="submit">Register</button>
+    </form>
+
+    {% if form.errors %}
+      <blockquote style="color:rgb(255, 50, 50);">
+        {{ form.errors }}
+      </blockquote>
+    {% endif %}
+
+    <p>Already have an account? <a href="/auth/login/">Log in</a></p>
+
+  </main>
+</body>
+</html>
