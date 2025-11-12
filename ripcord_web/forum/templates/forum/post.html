@@ -18,6 +18,19 @@
     <article>
       <p>{{ post.text }}</p>
     </article>
+    {% if comments %}
+      {% for comment in comments %}
+        <article>
+          <p>
+            {{ comment.text }}
+            <br>
+            <small>Posted by {{ comment.user.name }} on {{ post.date }}</small>
+          </p>
+        </article>
+      {% endfor %}
+    {% else %}
+      <p><small><i>No comments (yet!)</i></small></p>
+    {% endif %}
   </main>
 </body>
 </html>
