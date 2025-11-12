@@ -8,6 +8,7 @@
     <header>
       <nav>
         <a href="/">Home</a>
+        <a href="#" class="current">Forum</a>
       </nav>
       <h1>Forum Posts</h1>
     </header>
@@ -20,7 +21,7 @@
               <br><br>
               {% if post.text|length > 200 %}
                 {{ post.text | truncatechars:200 }}
-                <br><a href="/forum/posts/{{ post.id }}">Read more</a>
+                <br><a href="/forum/post/{{ post.id }}">Read more</a>
               {% else %}
                 {{ post.text }}
               {% endif %}

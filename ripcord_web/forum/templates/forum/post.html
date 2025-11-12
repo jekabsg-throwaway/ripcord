@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ post.title }}</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/forum/">Forum</a>
+    </nav>
+    <h1>{{ post.title }}</h1>
+    <p><small>Posted by {{ post.user.name }} on {{ post.date }}</small></p>
+  </header>
+
+  <main>
+    <article>
+      <p>{{ post.text }}</p>
+    </article>
+  </main>
+</body>
+</html>
