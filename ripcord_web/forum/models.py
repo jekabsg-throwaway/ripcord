@@ -50,6 +50,6 @@ class Comment (models.Model):
 
   user = models.ForeignKey(User, on_delete=models.CASCADE)
   post = models.ForeignKey(Post, on_delete=models.CASCADE)
-  text = models.CharField(500)
+  text = models.CharField("comment text", max_length=500)
   date = models.DateTimeField("date published")
 
